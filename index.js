@@ -1,25 +1,19 @@
 'use strict';
-
-import { ViewPropTypes } from 'react-native';
-
-var React = require('react');
-var {
+import React, {
   Component,
-} = React;
+} from 'react';
+import PropTypes from 'prop-types';
 
-var PropTypes = require('prop-types');
-
-var ReactNative = require('react-native');
-var {
+import {
   View,
   Easing,
   StyleSheet,
   Animated,
-  } = ReactNative;
+  } from  'react-native';
 
 class FlipView extends Component {
   static propTypes = {
-    style: ViewPropTypes.style,
+    style: PropTypes.any,
     flipDuration: PropTypes.number,
     flipEasing: PropTypes.func,
     flipAxis: PropTypes.oneOf(['x', 'y']),
